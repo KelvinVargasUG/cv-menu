@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-icon class="icon-titulo" ios="{{nombrePage.icon}}" md="{{nombrePage.icon}}"></ion-icon>
+      <ion-label class="texto-titulo"> {{nombrePage.title}}</ion-label>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="form_container" class="padre">
+    <div class="hijo">
+      <div id="perfil">
+        <div class="contenedorTitulo">
+          <img width="350" height="100" src="../../assets/cuadro.png" />
+          <ion-label class="tituloEtiquetas">PERFIL</ion-label>
+        </div>
+        <ul>
+          <li class="textoGeneralLst">{{perfil}}</li>
+        </ul>
+      </div>
+      <br>
+      <br>
+      <div id="contacto">
+        <div class="contenedorTitulo">
+          <img width="350" height="100" src="../../assets/cuadro.png" />
+          <span class="tituloEtiquetas">CONTACTO</span>
+        </div>
+        <ul class="textoGeneralLst">
+          <li>TELÉFONO:<br />{{contacto.telefono}}</li>
+          <li>CORREO INSTITUCIONAL:<br />{{contacto.correoInstitucional}}</li>
+          <li>CORREO PERSONAL:<br />{{contacto.correoPersonal}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ion-content>

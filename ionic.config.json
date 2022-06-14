@@ -1,0 +1,7 @@
+{
+  "name": "CV-Menu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

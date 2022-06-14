@@ -1,0 +1,124 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-icon class="icon-titulo" ios="{{nombrePage.icon}}" md="{{nombrePage.icon}}"></ion-icon>
+      <ion-label class="texto-titulo"> {{nombrePage.title}}</ion-label>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="general">
+  <div id="form_contenedor" class="padre">
+    <div class="hijo">
+      <section>
+        <figure>
+          <img class="foto" src="../../assets/foto.jpg" width="170" height="280" />
+        </figure>
+
+        <div class="textoCenter">
+          <ion-label id="nombre">{{datosPersonales.nombres}}<br>{{ datosPersonales.apellidos }}</ion-label>
+          <br>
+          <ion-label id="puesto">{{datosPersonales.profesion}}</ion-label>
+        </div>
+
+        <ion-label class="SubTitulo">DATOS PERSONALES</ion-label>
+        <br>
+        <img width="330" height="2" src="../../assets/rayasub.png">
+
+        <ul class="textoLst">
+          <li>Cedula: {{ datosPersonales.cedula }}</li>
+          <li>Sexo: {{ datosPersonales.sexo }}</li>
+          <li>Fecha de Nacimiento: {{ datosPersonales.fechaNacimiento }}</li>
+          <li>Lugar de Nacimiento: {{ datosPersonales.lugarNacimiento }}</li>
+          <li>Nacionalidad: {{ datosPersonales.nacionalidad }}</li>
+          <li>Estado Civil: {{ datosPersonales.estadoCivil }}</li>
+        </ul>
+      </section>
+
+      <section>
+        <div id="perfil">
+          <ion-label class="SubTitulo">PERFIL</ion-label>
+          <br>
+          <img width="330" height="2" src="../../assets/rayasub.png">
+          <ul>
+            <li class="textoLst">Soy estudiante de 6to semestre en la facultad <br>
+              de Ingenieria Industrial de la Universidad de <br>
+              Guayaquil en la carrera de Sistemas de infor- <br>
+              mación y tengo 21 años de edad.</li>
+          </ul>
+          <br>
+        </div>
+        <div id="contacto">
+          <ion-label class="SubTitulo">CONTACTO</ion-label>
+          <br>
+          <img width="330" height="2" src="../../assets/rayasub.png">
+          <ul class="textoLst">
+            <li>TELÉFONO:<br />{{contacto.telefono}}</li>
+            <li>CORREO INSTITUCIONAL:<br />{{contacto.correoInstitucional}}</li>
+            <li>CORREO PERSONAL:<br />{{contacto.correoPersonal}}</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="hijo">
+      <div id="Educacion">
+        <div class="contenedorTitulo">
+          <img width="350" height="100" src="../../assets/cuadro.png" />
+          <ion-label class="tituloEtiquetas">Educación</ion-label>
+        </div>
+
+        <ul class="textoLst2">
+          <li>Nombre de la Unidad Educativa:<br />{{educacionNombre.educacionPrimaria}}</li>
+          <li>Estado: {{educacionEstado.estadoPrimaria}}</li>
+        </ul>
+        <ul class="textoLst2">
+          <li>Nombre de la Unidad Educativa:<br />{{educacionNombre.educacionSecundaria}}</li>
+          <li>Estado: {{educacionEstado.estadoSecundaria}}</li>
+        </ul>
+        <ul class="textoLst2">
+          <li>Nombre de la Unidad Educativa:<br />{{educacionNombre.educacionSuperior}}</li>
+          <li>Estado: {{educacionEstado.estadoSuperio}}</li>
+        </ul>
+      </div>
+
+      <div class="contenedorTitulo">
+        <img width="350" height="100" src="../../assets/cuadro.png" />
+        <ion-label class="tituloEtiquetas">EXPERIENCIA LABORAL</ion-label>
+      </div>
+      <ul class="textoLst2" *ngFor="let i of experienciaLaboral;index as s">
+        <li *ngFor="let j of i; index as k">
+          {{experienciaLaboral[s][k]}}
+        </li>
+      </ul>
+
+      <div class="contenedorTitulo">
+        <img width="350" height="100" src="../../assets/cuadro.png" />
+        <ion-label class="tituloEtiquetas">REFERENCIA PERSONAL</ion-label>
+      </div>
+
+      <ul class="textoLst2" *ngFor="let i of referenciaPersonal;index as s">
+        <li *ngFor="let j of i; index as k">
+          {{referenciaPersonal[s][k]}}
+        </li>
+      </ul>
+      <br>
+
+      <div class="contenedorTitulo">
+        <img width="350" height="100" src="../../assets/cuadro.png" />
+        <ion-label class="tituloEtiquetas">REFERENCIA LABORAL</ion-label>
+      </div>
+
+      <ul class="textoLst2" *ngFor="let i of referenciaLaboral;index as s">
+        <li *ngFor="let j of i; index as k">
+          {{referenciaLaboral[s][k]}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</ion-content>
